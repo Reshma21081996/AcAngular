@@ -1,0 +1,31 @@
+<div class="row" id="bg">
+    <div class="col-xl-11 mt-5 ml-5 mr-5 mx-auto">
+      <h2>Shop Manager Requests</h2>
+        <div class="card mt-5">
+            <table class="table">
+              <tr>
+                <th class="ml-5">UserId</th>
+                <th class="ml-5">First Name</th>
+                <th class="ml-5">Last Name</th>
+                <th class="ml-5">Age</th>
+                <th class="ml-5">Gender</th>
+                <th class="ml-5">Contact Number</th>
+                <th class="ml-5">Status</th>
+                <th class="ml-5 mx-auto">Response</th>
+              </tr>
+
+            <tr *ngFor="let ad of admins">
+              <td class="ml-5">{{ad.userId}}</td>
+              <td class="ml-5">{{ad.firstName}}</td>
+              <td class="ml-5">{{ad.lastName}}</td>
+              <td class="ml-5">{{ad.age}}</td>
+              <td class="ml-5">{{ad.gender}}</td>
+              <td class="ml-5">{{ad.contactNumber}}</td>
+              <td class="ml-5">{{ad.status}}</td>
+              <td class="ml-5"><button type="submit" class="badge-success" (click)="accept(ad)">Accept</button></td>
+              <td class="ml-5"><button type="submit" class="badge-danger" (click)="decline(ad)">Decline</button></td>
+                  </tr>
+          </table>
+        </div>
+      </div>
+    </div>

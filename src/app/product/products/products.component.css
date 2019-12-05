@@ -1,0 +1,22 @@
+.card {
+    width:300px;
+    height:auto;
+}
+.card-img-top {
+    height:200px;
+}
+
+#purple {
+	background-color: #7967dd;
+	border: #7967dd;
+}
+
+#price {
+    font-family:Arial;
+    color:red;
+}
+
+#lightgrey {
+	color: #9992c2;
+
+}

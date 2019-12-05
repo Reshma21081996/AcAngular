@@ -1,0 +1,101 @@
+.material-icons.md-36 {
+	vertical-align: middle;
+}
+
+.material-icons.others {
+	vertical-align: middle;
+}
+
+.material-icons {
+	vertical-align: middle;
+}
+
+img{
+	width: auto;
+	height: 200px;
+}
+
+.navbar_top {
+	background-color: #331ea7;
+}
+
+.navbar_bottom {
+	background-color: #331ea7;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+
+.edit-btn {
+	background-color: #331ea7;
+}
+
+#grayText {
+	color: #BFBEBE;
+	font-size: 15px;
+}
+
+#grayTextLeft {
+	color: #BFBEBE;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+#title {
+	color: #6C6A6A;
+	font-size: 20px;
+}
+
+#price {
+	color: #A51E1E;
+}
+
+#truck {
+    color: #0B2386;
+}
+
+#add-to-cart {
+	background-color: #331ea7;
+	margin-bottom: 10px;
+}
+
+.badge-primary.delivery_badge {
+	vertical-align: super;
+}
+
+.alert {
+	margin-top: 10px;
+}
+
+.delete-icon {
+	text-align: right;
+}
+
+.signup-btn {
+	background-color: #331ea7;
+	color: white;
+}
+
+.card-group {
+	display: flex;
+	flex-flow: row;
+}
+
+#id {
+	display: flex;
+	flex-flow: column;
+}
+
+.card {
+	width: 300px;
+	height: auto;
+}
+
+#purple {
+	background-color: #7967dd;
+	border: #7967dd;
+/* margin-left: auto;
+margin-right: auto; */
+
+}
+

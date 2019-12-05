@@ -1,0 +1,84 @@
+<div class="row">
+        <div class="col bg">
+            <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-6 col-sm-6 mt-5 mb-5">
+            <h3 class="mb-1 ml-2 text-white">Find Products</h3>
+    
+            <form>
+              <div class="input-group"> <!--  md-form form-sm form-1 pl-0 -->
+                <div class="input-group-prepend">
+                  <span class="input-group-text lighten-3 ml-2"
+                    id="basic-text1"><i class="material-icons">shopping_cart</i></span>
+                </div>
+                <input type="search" class="form-control" name="search-bar" [(ngModel)]="searchKey" (input)="newSearch()" placeholder="Search Products">
+              </div>
+            
+            </form>
+          </div>
+
+          
+        </div>
+        </div>
+        
+    </div>
+
+    <ul *ngIf="searchKey">
+            <a class="dropdown-item" *ngFor="let type of filteredlist" selected="type" (click)="list(type)">{{type.productName}}</a>
+        </ul>
+
+ <div class="row">
+    <div class="col-xl-11 mt-5 ml-5 mr-5 mx-auto">
+         <h2>User Bill</h2>
+            <div class="card mt-5 mb-5">
+                <table class="table">
+                     <tr>
+                        <th class="ml-5">Product Code</th>
+                        <th class="ml-5">Product Name</th>
+                        <th class="ml-5">Rate per quantity</th>
+                        <th class="ml-5">Quantity</th>
+                        <th class="ml-5">Total</th>
+                    </tr>
+            
+         <tr *ngFor="let choice of userList">
+            <td class="ml-5">{{choice.productCode}}</td>
+             <td class="ml-5">{{choice.productName}}</td>
+            <td class="ml-5">{{choice.ratePerQuantity}}</td>
+            <td class="ml-5"> <button id="decrement" (click)='remove(choice)'  >
+                 <i class="material-icons">remove_circle</i>
+                     </button>
+                 <input type="text" id="quantity" name="Quantity" value="{{choice.quantity}}"  class="quantity" size="3"/>
+                    <button id="increment" (click)='add(choice)'>
+                      <i class="material-icons">add_circle</i>
+                    </button></td>
+                    <td class="ml-5">{{choice.quantity*choice.ratePerQuantity}}</td>
+                     </tr>
+                     <tr>
+                        <td class="ml-5"></td>
+                        <td class="ml-5"></td>
+                        <td class="ml-5"></td>
+                        <td class="ml-5"></td>
+                        <td class="ml-5">{{total}}</td> 
+                     </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+               
+                <div class="col-lg-3 mt-5 mx-auto">
+                       <b> <label for="contact">Contact Number</label> </b>
+                           <input type="text"  id="contact"[(ngModel)]="contact" required>
+                               
+                    </div>
+                    <div class="row mb-5 mt-3 mx-auto">
+                            <div class="mx-auto">
+                                <button type="submit" class="btn purple" (click)="onSaveClick()">Save</button>
+                            </div>
+                        </div>
+
+                <!-- <div>
+                        <input type="text" name="contact" id="contact" [(ngModel)]="contact" required>
+                        
+                      </div>
+                        <div> <input type="submit" class="btn btn-primary purple mt-5" value="Save" (click)="onSaveClick()">
+                        </div> -->
+            

@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6 col-sm-6 mt-5 mb-5">
+          <h2 class="mb-1 ml-2" id="grey">
+            Find Products 
+          </h2>
+          <form>
+            <div class="input-group ">
+              <div class="input-group-prepend ">
+                <label for="search-bar" class="input-group-text gray  lighten-3 ml-2 ">
+                  <i class="material-icons">shopping_cart</i>
+                </label>
+              </div>
+              <input class="form-control mx-auto w-75 " type="search" placeholder=" Search by category ... " aria-label="Search" name="Search" id="search-bar"  [(ngModel)]='searchKey' (input)="search()">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="flex">
+  
+   <!--   <app-product-type *ngFor="let image of images" class="col-sm-3" [productimage]="image"></app-product-type>  -->
+     <app-product-type [list]="filteredProdList"></app-product-type> 
+      
+</div>

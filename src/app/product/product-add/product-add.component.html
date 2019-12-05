@@ -1,0 +1,92 @@
+<div id="grey">
+    <div class="container-fluid mt-4" >
+        <h3>Add Product</h3>
+        <form [formGroup]="productForm">
+              <div class="row mt-4">
+                    <div class="col-lg-3 mt-5">
+                            <label for="editCode">Product Code</label>
+                            <input type="text" id="editCode" formControlName="editCode"   class="form-control">
+                             <div class ="text-danger" *ngIf = "editCode.invalid && editCode.errors.required"> Product Code is required</div> 
+                                  </div>
+                    <div class="col-lg-11 mt-4">
+      <label for="editName">Product Name</label>
+      <input type="text"  id="editName" formControlName="editName" class="form-control">
+      <div class ="text-danger" *ngIf = "editName.errors?.maxlength || editName.errors?.minlength">Product Name must be atleast 2 and atmost 10 characters long</div>
+      <div class ="text-danger" *ngIf = "editName.invalid && editName.errors.required">Product Name is required</div>
+    </div>
+    <div class="col-lg-11 mt-5">
+        <label for="editURL">Image URL</label>
+        <input type="url"  id="editURL" formControlName="editURL" class="form-control">
+        <div class ="text-danger" *ngIf = "editURL.invalid && editURL.errors.required"> Image URL is required</div>
+      </div>
+                    <div class="col-lg-3 mt-5">
+      <label for="editBrand">Brand</label>
+      <input type="text" id="editBrand" formControlName="editBrand" class="form-control">
+      <div class ="text-danger" *ngIf = "editBrand.invalid && editBrand.errors.required"> Brand is required</div>
+            </div>
+            <div class="col-lg-3 mt-5">
+                    <label for="editStock">Stock Count</label>
+                    <input type="text" id="editStock" formControlName="editStock" class="form-control">
+                    <div class ="text-danger" *ngIf = "editStock.invalid && editStock.errors.required"> Stock Count is required</div>
+                          </div>
+             <div class="col-lg-3 mt-5">
+                    <label for="rate">Rate per Quantity</label>
+                         <input type="text"  id="rate" formControlName="rate" class="form-control">
+                         <div class ="text-danger" *ngIf = "rate.invalid && rate.errors.required"> Rate is required</div>   
+                              </div>
+              <div class="col-lg-3 mt-5">
+                      <label for="manufactureDate">Manufacture Date</label>
+                            <input type="date"  id="manufactureDate" formControlName="manufactureDate" class="form-control">
+                                 <div class ="text-danger" *ngIf = "manufactureDate.invalid && manufactureDate.errors.required"> Manufacture Date is required</div>   
+                                      </div>
+                    <div class="col-lg-3 mt-5">
+      <label for="expiryDate">Expiry Date</label>
+      <input type="date"  id="expiryDate" formControlName="expiryDate" class="form-control">
+      <div class ="text-danger" *ngIf = "expiryDate.invalid && expiryDate.errors.required"> Expiry Date is required</div>   
+            </div>
+            <div class="col-lg-3 mt-5">
+                    <label for="addDate">Add Date</label>
+                    <input type="date"  id="addDate" formControlName="addDate" class="form-control">
+                    <div class ="text-danger" *ngIf = "addDate.invalid && addDate.errors.required"> Add Date is required</div>   
+                          </div>
+                     <div class="col-lg-3 mt-5">
+      <label for="type">Product Type</label>
+      <select class="form-control" id="type" formControlName="type">
+                                <option></option>
+                                <option *ngFor="let type of types" [value]="type" selected="type==product.productType">{{type}}</option>
+      </select><br>
+      <div class ="text-danger" *ngIf = "type.invalid && type.errors.required"> Product Type is required</div>
+                    </div> 
+                    <!-- <div class="col-lg-3 mt-5">
+                          <div>Active</div>
+      <input type="radio" class="radio-inline mt-3" [value]=true id="yes" formControlName="active">
+      <label for="yes" class="pl-2"> Yes </label>
+      <input type="radio" class="radio-inline mt-3 ml-3" formControlName="active" [value]=false value="no" id="no">
+      <label for="no" class="pl-2"> No</label>
+      <div class ="text-danger" *ngIf = "active.invalid && active.errors.required"> Stock Status is required</div>
+    </div> -->
+                    <!-- <div class="col-lg-12 mt-5">
+                          <input type="checkbox" class="checkbox-inline" formControlName="freeDelivery" id="freeDelivery">
+                          <label for="freeDelivery" class="pl-2">Free Delivery</label>
+            </div> -->
+            <div class="col-lg-3 mt-5">
+                    <label for="aisle">Aisle</label>
+                    <input type="text"  id="aisle" formControlName="aisle" class="form-control">
+                    <div class ="text-danger" *ngIf = "aisle.invalid && aisle.errors.required"> Aisle is required</div>   
+                          </div>
+             <div class="col-lg-3 mt-5">
+                 <label for="shelf">Shelf</label>
+                    <input type="text"  id="shelf" formControlName="shelf" class="form-control">
+                        <div class ="text-danger" *ngIf = "shelf.invalid && shelf.errors.required">Shelf is required</div>   
+             </div>
+             
+              </div>
+              <input type="submit" class="btn purple mt-5" (click) = "onAddClick()" value="Add">
+</form><br><br><br><br>
+</div>
+</div>
+
+
+
+
+
